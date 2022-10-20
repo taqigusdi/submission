@@ -1,4 +1,6 @@
-import { itActsAsFavoriteRestaurantModel } from "./contract/favorite-restaurant-spec";
+/* eslint-disable no-undef */
+/* eslint-disable eqeqeq */
+import { itActsAsFavoriteRestaurantModel } from './contract/favorite-restaurant-spec';
 
 let favoriteRestaurant = [];
 
@@ -45,7 +47,6 @@ const FavoriteRestaurantArray = {
 
                 return jammedRestaurantTitle.indexOf(jammedQuery) !== -1;
             });
-
     },
 };
 

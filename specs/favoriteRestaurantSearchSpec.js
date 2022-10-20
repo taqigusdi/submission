@@ -1,9 +1,9 @@
-import FavoriteRestaurantSearchPresenter from "../src/scripts/views/pages/saved-restaurants/favorite-restaurant-search-presenter";
-import restaurantFavoriteIdb from "../src/scripts/data/restaurant-favorite-idb";
-import FavoriteRestaurantSearchView from '../src/scripts/views/pages/saved-restaurants/favorite-restaurant-search-view'
+/* eslint-disable no-undef */
+import FavoriteRestaurantSearchPresenter from '../src/scripts/views/pages/saved-restaurants/favorite-restaurant-search-presenter';
+import restaurantFavoriteIdb from '../src/scripts/data/restaurant-favorite-idb';
+import FavoriteRestaurantSearchView from '../src/scripts/views/pages/saved-restaurants/favorite-restaurant-search-view';
 
 describe('Searching restaurant', () => {
-
     let presenter;
     let favoriteRestaurant;
     let view;
@@ -12,7 +12,7 @@ describe('Searching restaurant', () => {
         const queryElement = document.getElementById('query');
         queryElement.value = query;
         queryElement.dispatchEvent(new Event('change'));
-    }
+    };
 
     const setRestaurantSearchContainer = () => {
         view = new FavoriteRestaurantSearchView();
@@ -33,7 +33,6 @@ describe('Searching restaurant', () => {
     });
 
     describe('When query is not empty', () => {
-
         it('should be able to capture the query typed by the user', () => {
             searchRestaurant('restaurant a');
 
@@ -45,7 +44,7 @@ describe('Searching restaurant', () => {
             searchRestaurant('restaurant a');
 
             expect(favoriteRestaurant.searchRestaurant)
-                .toHaveBeenCalledWith('restaurant a')
+                .toHaveBeenCalledWith('restaurant a');
         });
 
         it('should show the restaurant found by Favorite Restaurant', (done) => {
@@ -106,7 +105,6 @@ describe('Searching restaurant', () => {
     });
 
     describe('When query is empty', () => {
-
         it('should capture the query as empty', () => {
             searchRestaurant(' ');
             expect(presenter.latestQuery.length).toEqual(0);
@@ -130,7 +128,6 @@ describe('Searching restaurant', () => {
     });
 
     describe('When no favorite restaurant could be found', () => {
-
         it('should show the empty message', (done) => {
             document.getElementById('posts')
                 .addEventListener('restaurants:updated', () => {

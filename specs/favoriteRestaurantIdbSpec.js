@@ -1,5 +1,6 @@
-import { itActsAsFavoriteRestaurantModel } from "./contract/favorite-restaurant-spec";
-import restaurantFavoriteIdb from "../src/scripts/data/restaurant-favorite-idb";
+/* eslint-disable no-undef */
+import { itActsAsFavoriteRestaurantModel } from './contract/favorite-restaurant-spec';
+import restaurantFavoriteIdb from '../src/scripts/data/restaurant-favorite-idb';
 
 describe('Favorite Restaurant Idb Contract Test Implementation', () => {
     afterEach(async () => {

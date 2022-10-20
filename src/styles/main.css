@@ -335,20 +335,16 @@ post detail
 
 .container {
   width: 100%;
-  height: 60px;
+  height: 45px;
   display: flex;
   align-items: center;
   justify-content: center;
 
 }
 
-form {
+#query {
   width: 500px;
-  height: 55px;
   display: flex;
-}
-
-form>#query {
   flex: 1;
   font-size: 18px;
   font-weight: 700;
