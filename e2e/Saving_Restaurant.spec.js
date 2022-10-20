@@ -1,5 +1,7 @@
+/* eslint-disable no-plusplus */
+/* eslint-disable no-await-in-loop */
+/* eslint-disable no-undef */
 const assert = require('assert');
-const { async } = require('regenerator-runtime');
 
 Feature('Saving Restaurant');
 
@@ -95,7 +97,7 @@ Scenario('searching restaurant', async ({ I }) => {
     I.seeElement('#query');
 
     const searchQuery = titles[1].substring(1, 3);
-    const matchingRestaurant = titles.filter((title) => title.indexOf(searchQuery) !== -1);
+    const matchingRestaurant = titles.filter((name) => name.indexOf(searchQuery) !== -1);
 
     I.fillField('#query', searchQuery);
     I.pressKey('Enter');

@@ -1,6 +1,7 @@
-import restaurantFavoriteIdb from "../src/scripts/data/restaurant-favorite-idb";
-import FavoriteRestaurantSearchView from "../src/scripts/views/pages/saved-restaurants/favorite-restaurant-search-view";
-import FavoriteRestaurantShowPresenter from "../src/scripts/views/pages/saved-restaurants/favorite-restaurant-show-presenter";
+/* eslint-disable no-undef */
+import restaurantFavoriteIdb from '../src/scripts/data/restaurant-favorite-idb';
+import FavoriteRestaurantSearchView from '../src/scripts/views/pages/saved-restaurants/favorite-restaurant-search-view';
+import FavoriteRestaurantShowPresenter from '../src/scripts/views/pages/saved-restaurants/favorite-restaurant-show-presenter';
 
 describe('Showing all favorite restaurants', () => {
     let view;
@@ -15,7 +16,6 @@ describe('Showing all favorite restaurants', () => {
     });
 
     describe('When no restaurants have been liked', () => {
-
         it('should ask for the favorite restaurant', () => {
             const favoriteRestaurant = spyOnAllFunctions(restaurantFavoriteIdb);
 
@@ -45,7 +45,6 @@ describe('Showing all favorite restaurants', () => {
     });
 
     describe('When favorite restaurant exist', () => {
-
         it('should show the restaurants', (done) => {
             document.getElementById('posts').addEventListener('restaurants:updated', () => {
                 expect(document.querySelectorAll('.post-item').length).toEqual(2);

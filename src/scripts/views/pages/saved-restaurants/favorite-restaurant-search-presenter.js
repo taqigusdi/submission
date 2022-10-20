@@ -9,7 +9,7 @@ class FavoriteRestaurantSearchPresenter {
         this._view.runWhenUserIsSearching((latestQuery) => {
             this._searchRestaurant(latestQuery);
         });
-    };
+    }
 
     async _searchRestaurant(latestQuery) {
         this._latestQuery = latestQuery.trim();
